@@ -5,10 +5,14 @@
 # Production server
 gunicorn==21.2.0
 whitenoise==6.6.0
+dj-database-url==2.1.0
 
 # Cache
 django-redis==5.4.0
 redis==5.0.1
+
+# Fix pkg_resources
+setuptools
 
 # Monitoring
 sentry-sdk==1.39.1
