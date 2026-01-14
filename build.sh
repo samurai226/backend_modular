@@ -12,4 +12,7 @@ python manage.py migrate
 # Initialiser les données
 python manage.py init_data
 
+# Créer le superuser
+python manage.py create_admin
+
 echo "✅ Build completed!"
