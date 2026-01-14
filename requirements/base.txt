@@ -1,0 +1,27 @@
+# Requirements de base pour tous les environnements
+
+# Django
+Django==4.2.8
+djangorestframework==3.14.0
+
+# Database
+#psycopg2-binary==2.9.9
+
+# JWT Authentication
+djangorestframework-simplejwt==5.3.1
+
+# CORS
+django-cors-headers==4.3.1
+
+# Filtering
+django-filter==23.5
+
+# API Documentation
+drf-yasg==1.21.7
+
+# Utilities
+pytz==2023.3.post1
+python-decouple==3.8
+
+# Pillow pour images
+#Pillow==10.1.0

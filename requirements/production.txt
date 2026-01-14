@@ -1,0 +1,14 @@
+# Requirements pour production
+
+-r base.txt
+
+# Production server
+gunicorn==21.2.0
+whitenoise==6.6.0
+
+# Cache
+django-redis==5.4.0
+redis==5.0.1
+
+# Monitoring
+sentry-sdk==1.39.1
