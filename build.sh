@@ -3,6 +3,11 @@ set -o errexit
 
 echo "Build process..."
 
+# Créer les dossiers nécessaires
+mkdir -p logs
+mkdir -p media
+mkdir -p staticfiles
+
 pip install --upgrade pip
 pip install -r requirements/production.txt
 
