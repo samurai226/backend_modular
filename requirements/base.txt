@@ -25,3 +25,4 @@ python-decouple==3.8
 
 # Pillow pour images
 Pillow==10.4.0
+qrcode[pil]==7.4.2

@@ -53,6 +53,7 @@ urlpatterns = [
     path('api/auth/', include('apps.authentication.urls')),
     path('api/geography/', include('apps.geography.urls')),
     path('api/transport/', include('apps.transport.urls')),
+    path('api/delivery/', include('apps.delivery.urls')),
     # path('api/geography/', include('apps.geography.urls')),
     # path('api/transport/', include('apps.transport.urls')),
     # path('api/delivery/', include('apps.delivery.urls')),
