@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     # Local apps
     'apps.authentication',
     'apps.geography',
+    'apps.transport',
     # 'apps.geography',
     # 'apps.transport',
     # 'apps.delivery',
