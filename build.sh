@@ -24,4 +24,7 @@ python manage.py create_admin
 # Creer les wallets
 python manage.py init_payment
 
+python manage.py init_shop
+python manage.py init_notifications
+
 echo "Build completed!"
