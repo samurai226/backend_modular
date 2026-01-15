@@ -22,10 +22,10 @@ DATABASES = {
 }
 
 # CORS - Strict en production
-CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ORIGINS', '').split(',')
-CORS_ALLOW_CREDENTIALS = True
-# Pour les applications mobiles Flutter
+# CORS
+# CORS - Temporairement ouvert pour test
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 
 # Security Settings
 SECURE_SSL_REDIRECT = True
