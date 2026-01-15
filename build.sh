@@ -21,4 +21,7 @@ python manage.py init_data
 # Creer le superuser
 python manage.py create_admin
 
+# Creer les wallets
+python manage.py init_payment
+
 echo "Build completed!"

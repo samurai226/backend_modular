@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.transport',
     'apps.delivery',
     'apps.payment',
+    'apps.shop',
     # 'apps.geography',
     # 'apps.transport',
     # 'apps.delivery',

@@ -55,6 +55,7 @@ urlpatterns = [
     path('api/transport/', include('apps.transport.urls')),
     path('api/delivery/', include('apps.delivery.urls')),
     path('api/payment/', include('apps.payment.urls')),
+    path('api/shop/', include('apps.shop.urls')),
     
     # path('api/geography/', include('apps.geography.urls')),
     # path('api/transport/', include('apps.transport.urls')),
