@@ -26,3 +26,9 @@ python-decouple==3.8
 # Pillow pour images
 Pillow==10.4.0
 qrcode[pil]==7.4.2
+
+# Admin Interface
+django-jazzmin==3.0.0
+
+# Static files (nécessaire aussi en dev)
+whitenoise==6.6.0

@@ -17,6 +17,7 @@ SECRET_KEY = os.environ.get(
 # Application definition
 INSTALLED_APPS = [
     # Django apps
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -220,3 +221,146 @@ EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True') == 'True'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
+
+# =============================================================================
+# JAZZMIN CONFIGURATION - Ajouter à la fin de settings.py
+# =============================================================================
+
+JAZZMIN_SETTINGS = {
+    # Titre du site
+    "site_title": "Colisso Admin",
+    "site_header": "Colisso",
+    "site_brand": "Colisso Transport & Livraison",
+    "site_logo": None,  # Ajoute le chemin vers ton logo si tu en as un
+    "login_logo": None,
+    "login_logo_dark": None,
+    "site_logo_classes": "img-circle",
+    "site_icon": None,
+    
+    # Message de bienvenue
+    "welcome_sign": "Bienvenue sur l'administration de Colisso",
+    
+    # Copyright
+    "copyright": "Colisso Transport",
+    
+    # Recherche dans tous les models
+    "search_model": ["auth.User", "auth.Group"],
+    
+    # Nom du champ utilisateur
+    "user_avatar": None,
+    
+    ############
+    # Top Menu #
+    ############
+    "topmenu_links": [
+        {"name": "Accueil", "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "Voir le site", "url": "/", "new_window": True},
+        {"model": "auth.User"},
+        {"app": "shop"},
+    ],
+    
+    #############
+    # User Menu #
+    #############
+    "usermenu_links": [
+        {"name": "Voir le site", "url": "/", "new_window": True},
+        {"model": "auth.user"},
+    ],
+    
+    #############
+    # Side Menu #
+    #############
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": [],
+    "hide_models": [],
+    
+    # Ordre des apps dans le menu
+    "order_with_respect_to": [
+        "auth",
+        "authentication",
+        "shop",
+    ],
+    
+    # Icônes personnalisées pour les apps et models
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        
+        # Authentication app
+        "authentication": "fas fa-shield-alt",
+        "authentication.User": "fas fa-user-circle",
+        "authentication.Role": "fas fa-user-tag",
+        
+        # Shop app
+        "shop": "fas fa-shopping-cart",
+        "shop.Categorie": "fas fa-tags",
+        "shop.Produit": "fas fa-box",
+        "shop.Panier": "fas fa-shopping-basket",
+        "shop.Commande": "fas fa-file-invoice",
+        "shop.Avis": "fas fa-star",
+    },
+    
+    # Icônes par défaut
+    "default_icon_parents": "fas fa-chevron-circle-right",
+    "default_icon_children": "fas fa-circle",
+    
+    #################
+    # Related Modal #
+    #################
+    "related_modal_active": False,
+    
+    #############
+    # UI Tweaks #
+    #############
+    "custom_css": None,
+    "custom_js": None,
+    "use_google_fonts_cdn": True,
+    "show_ui_builder": False,
+    
+    ###############
+    # Change view #
+    ###############
+    "changeform_format": "horizontal_tabs",
+    "changeform_format_overrides": {
+        "auth.user": "collapsible",
+        "auth.group": "vertical_tabs",
+    },
+    
+    # Thème par défaut
+    "theme": "flatly",  # Options: "cerulean", "cosmo", "cyborg", "darkly", "flatly", "journal", "litera", "lumen", "lux", "materia", "minty", "pulse", "sandstone", "simplex", "sketchy", "slate", "solar", "spacelab", "superhero", "united", "yeti"
+}
+
+# UI Tweaks supplémentaires
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": "navbar-primary",
+    "accent": "accent-primary",
+    "navbar": "navbar-white navbar-light",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-primary",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "flatly",
+    "dark_mode_theme": "darkly",
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
+}
